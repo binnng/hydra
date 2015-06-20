@@ -1,0 +1,3 @@
+[submodule "artTemplate"]
+	path = artTemplate
+url=https://github.com/aui/artTemplate.git
