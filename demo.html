@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Hydra demo</title>
+	<script type="text/javascript" src="hydra.js"></script>
+</head>
+<body>
+<div data-hydra="hydra-demo">
+	<input value="{{test_data}}" id="input">
+</div>
+</body>
+
+
+<script type="text/javascript">
+	
+	var data = {
+		test_data: 1
+	};
+
+	hydra.set("hydra-demo", data);
+
+
+
+	setTimeout(function() {
+		hydra.set("hydra-demo", {
+			test_data: 2
+		});
+
+	}, 3000);
+
+</script>
+</html>
