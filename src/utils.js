@@ -10,7 +10,7 @@ each = function (data, callback) {
 
 // 扩展util
 extend(utils, isType, {
-	each: each,
+	$each: each,
 
 	// 修复isType中对dom类型操作的错误
 	isObject: function(obj) {

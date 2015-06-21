@@ -7,25 +7,26 @@
 !(function (window, document, undefined) {
 
 
-// https://github.com/segmentio/extend
 
-function extend(object) {
-  var args = Array.prototype.slice.call(arguments, 1);
+function extend (object) {
+    // Takes an unlimited number of extenders.
+    var args = Array.prototype.slice.call(arguments, 1);
 
-  for (var i = 0, source; source = args[i]; i++) {
-      if (!source) continue;
-      for (var property in source) {
-          object[property] = source[property];
-      }
-  }
+    // For each extender, copy their properties on our object.
+    for (var i = 0, source; source = args[i]; i++) {
+        if (!source) continue;
+        for (var property in source) {
+            object[property] = source[property];
+        }
+    }
 
-  return object;
-}/*
- * JavaScript Librery isType
- * Copyright (c) 2012 V\u00edctor Garc\u00eda
- * Released under Unlicense
- * https://github.com/gc-victor/isType
- */
+    return object;
+};/*
+* JavaScript Librery isType
+* Copyright (c) 2012 V\u00edctor Garc\u00eda
+* Released under Unlicense
+*/
+
 /*
  * Creates isType methods
  * methods: isArray, isBoolean, isDate, isFunction, isNaN, isNumber, isObject, isRegExp, isUndefined, isString
@@ -304,7 +305,6 @@ var compile = template.compile = function (source, options) {
     // 对编译结果进行一次包装
 
     function render (data) {
-
         
         try {
             
@@ -443,6 +443,9 @@ function compiler (source, options) {
     // html与逻辑语法分离
     forEach(source.split(openTag), function (code) {
         code = code.split(closeTag);
+
+
+        console.log(code)
         
         var $0 = code[0];
         var $1 = code[1];
@@ -771,7 +774,7 @@ each = function (data, callback) {
 
 // 扩展util
 extend(utils, isType, {
-	each: each,
+	$each: each,
 
 	// 修复isType中对dom类型操作的错误
 	isObject: function(obj) {
