@@ -1,9 +1,9 @@
 /*
- * JavaScript Librery isType
- * Copyright (c) 2012 V\u00edctor Garc\u00eda
- * Released under Unlicense
- * https://github.com/gc-victor/isType
- */
+* JavaScript Librery isType
+* Copyright (c) 2012 V\u00edctor Garc\u00eda
+* Released under Unlicense
+*/
+
 /*
  * Creates isType methods
  * methods: isArray, isBoolean, isDate, isFunction, isNaN, isNumber, isObject, isRegExp, isUndefined, isString

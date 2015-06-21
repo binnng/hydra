@@ -1,3 +1,9 @@
 [submodule "artTemplate"]
 	path = artTemplate
 	url = https://github.com/aui/artTemplate.git
+[submodule "extend"]
+	path = extend
+	url = https://github.com/segmentio/extend.git
+[submodule "isType"]
+	path = isType
+	url = https://github.com/gc-victor/isType.git
